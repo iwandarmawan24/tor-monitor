@@ -1,0 +1,25 @@
+# Rust
+/target/
+Cargo.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Debug
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Misc
+*.log
+*.tmp

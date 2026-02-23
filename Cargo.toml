@@ -1,0 +1,32 @@
+[package]
+name = "tor-monitor"
+version = "0.1.0"
+edition = "2021"
+authors = ["Yayasan Darmawan <yayasandarmawan@example.com>"]
+description = "A lightweight, terminal-based system resource monitor for macOS with zero dependencies"
+documentation = "https://github.com/yayasandarmawan/tor-monitor#readme"
+homepage = "https://github.com/yayasandarmawan/tor-monitor"
+repository = "https://github.com/yayasandarmawan/tor-monitor"
+readme = "README.md"
+license = "MIT"
+keywords = ["monitor", "system", "terminal", "macos", "cli", "tor"]
+categories = ["command-line-utilities", "development-tools::profiling"]
+exclude = ["/.github/", "/docs/", "/*.md"]
+
+[dependencies]
+# Zero external dependencies - pure Rust standard library only!
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[[bin]]
+name = "tor-monitor"
+path = "src/main.rs"

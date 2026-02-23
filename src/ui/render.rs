@@ -47,7 +47,7 @@ pub fn render(app: &App) -> String {
 
 fn render_header(app: &App) -> String {
     let uptime = format_duration(app.uptime_secs);
-    let title = "RMON - Resource Monitor";
+    let title = "TOR-MONITOR - Resource Monitor";
     let uptime_label = format!("Uptime: {}", uptime);
 
     let padding = WIDTH.saturating_sub(title.len() + uptime_label.len() + 6);
